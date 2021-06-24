@@ -1,8 +1,8 @@
 let seats = document.getElementsByClassName("seat");
 
-for (const ticket of seats) {
-    ticket.addEventListener("click", () => {
-        let booked = ticket.classList.toggle("booked");
+for (const seat of seats) {
+    seat.addEventListener("click", () => {
+        let booked = seat.classList.toggle("booked");
 
         const bookedSeats = document.getElementsByClassName("booked").length;
         const remainingSeats = 96 - bookedSeats;
