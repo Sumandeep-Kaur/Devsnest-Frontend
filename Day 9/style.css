@@ -9,32 +9,38 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:	#ebc5c2;
+    background-color: #404040;
 }
 .stats{
     display: flex;
     justify-content: space-between;
     width: 40%;
     margin: 30px auto;
-    color: #880808;
+    color: white;
     font-size: x-large;
     font-family: monospace;
 }
+.screen{
+    margin: 10px auto 40px auto;
+    width: 500px;
+    border-top: 150px solid white;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
 .container{
-    height: 400px;
-    width: 400px;
     display: grid;
     cursor: pointer;
-    grid-template-columns: repeat(6, auto);
-    grid-template-rows: repeat(6, auto);
-    background-color: #F88379;
-    border-radius: 5px;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 3px;
 }
 .seat{
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    border-radius: 2px;
 }
 .booked{
-    background-color: #FA5F55;
+    background-color: #282828;
 }
 

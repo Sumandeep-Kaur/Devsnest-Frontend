@@ -5,7 +5,7 @@ for (const ticket of seats) {
         let booked = ticket.classList.toggle("booked");
 
         const bookedSeats = document.getElementsByClassName("booked").length;
-        const remainingSeats = 36 - bookedSeats;
+        const remainingSeats = 96 - bookedSeats;
 
 
     document.querySelector(".bookedSeats").innerHTML = "Booked Seats : " + bookedSeats;
