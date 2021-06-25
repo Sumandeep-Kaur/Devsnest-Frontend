@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <div class="stats">
+        <h2>Remaining Moves - <span>30</span></h2>
+    </div>
+    <div class="container">
+        <div class="card" data-framework="amazon">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-amazon fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="apple">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-apple fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="google">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-google fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="amazon">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-amazon fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="twitter">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-twitter fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="google">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-google fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="instagram">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-instagram fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="facebook">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-facebook fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="apple">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-apple fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="instagram">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-instagram fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="twitter">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-twitter fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="facebook">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-facebook fa-3x backface" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="popup" id="win">
+        <div>
+            <h2>Congratulations... You Win! 🎉</h2>
+            <br>
+            <button id="play-again" onclick="window.location.reload()">Play Again 😄</button>
+        </div>
+    </div>
+    <div class="popup" id="lose">
+        <div>
+            <h2>Ohh...You Lose! </h2>
+            <br>
+            <button id="play-again" onclick="window.location.reload()">Play Again 😄</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
