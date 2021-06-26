@@ -4,20 +4,18 @@ let lockBoard = false;
 let firstCard, secondCard;
 
 let moves = 30;
+let match = 0;
 
 function flipCard() {
-  //this.classList.toggle('flip');
   if (lockBoard) return;
   if (this === firstCard) return;
 
   moves--;
   document.querySelector("span").innerHTML = moves;
-  /*if(moves === 0){
+  if(moves === 0){
     document.querySelector(".popup").style.display="flex";
-    document.querySelector(".container").style.display="none";
-    let h2=document.createElement("h2");
-    document.querySelector(".popup > div > h2").innerHTML="You Lose !!";
-  }*/
+    document.querySelector(".popup > div > h2").innerHTML="GAME OVER <br> You Lose!! &#128577";
+  }
 
   this.classList.add('flip');
 
@@ -27,7 +25,6 @@ function flipCard() {
     return;
   }
   secondCard = this;
-  //hasFlippedCard = false;
 
   checkForMatch();
 }
@@ -35,6 +32,12 @@ function flipCard() {
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
   isMatch ? disableCards() : unflipCards();
+
+  if(isMatch) match++;
+  if(match === 8){    
+    document.querySelector(".popup").style.display="flex";
+    document.querySelector(".popup > div > h2").innerHTML="Congratulations... <br> You Won!! &#128515"
+  }
 }
 
 function disableCards() {
@@ -49,7 +52,6 @@ function unflipCards() {
   setTimeout(() => {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
-    //lockBoard = false;
     resetBoard();
   }, 1000);
 }
@@ -68,6 +70,3 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-document.getElementById("reload").addEventListener("click", (e)=>{
-  window.location.reload();
-})

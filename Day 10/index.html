@@ -9,13 +9,26 @@
     <title>Memory Game</title>
 </head>
 <body>
-    <div class="stats">
-        <h2>Remaining Moves - <span>30</span></h2>
-    </div>
     <div class="container">
         <div class="card" data-framework="amazon">
             <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
             <i class="fa fa-amazon fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="snapchat">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-snapchat fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="whatsapp">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="amazon">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-amazon fa-3x backface" aria-hidden="true"></i>
+        </div>
+        <div class="card" data-framework="whatsapp">
+            <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp fa-3x backface" aria-hidden="true"></i>
         </div>
         <div class="card" data-framework="apple">
             <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
@@ -25,9 +38,9 @@
             <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
             <i class="fa fa-google fa-3x backface" aria-hidden="true"></i>
         </div>
-        <div class="card" data-framework="amazon">
+        <div class="card" data-framework="snapchat">
             <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
-            <i class="fa fa-amazon fa-3x backface" aria-hidden="true"></i>
+            <i class="fa fa-snapchat fa-3x backface" aria-hidden="true"></i>
         </div>
         <div class="card" data-framework="twitter">
             <i class="fa fa-snowflake-o fa-3x frontface" aria-hidden="true"></i>
@@ -63,18 +76,21 @@
         </div>
     </div>
 
-    <div class="popup" id="win">
-        <div>
-            <h2>Congratulations... You Win! 🎉</h2>
-            <br>
-            <button id="play-again" onclick="window.location.reload()">Play Again 😄</button>
+    <div class="right">
+        <div class="title">
+            <h1 id="title">MEMORY <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GAME</h1>
         </div>
+        <div class="stats">
+            <h2>Remaining Moves -  <span>30</span></h2>
+            <button id="restart" onclick="window.location.reload()">Restart <i class="fa fa-refresh" aria-hidden="true"></i></button>
+        </div>    
     </div>
-    <div class="popup" id="lose">
+
+    <div class="popup">
         <div>
-            <h2>Ohh...You Lose! </h2>
+            <h2></h2>
             <br>
-            <button id="play-again" onclick="window.location.reload()">Play Again 😄</button>
+            <button onclick="window.location.reload()">Play Again </button>
         </div>
     </div>
     <script src="script.js"></script>
