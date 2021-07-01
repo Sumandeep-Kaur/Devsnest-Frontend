@@ -336,13 +336,6 @@ footer .total_que span{
     display: flex;
     user-select: none;
 }
-footer .total_que span p{
-    font-weight: bold;
-    padding: 0 5px;
-}
-footer .total_que span p:first-child{
-    padding-left: 0px;
-}
 footer button{
     padding: 15px 25px;
     background: #8a2435;
