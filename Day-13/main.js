@@ -12,7 +12,7 @@ let weather = {
         .then((data) => this.displayWeather(data));
     },
 
-    displayWeather: function (data) {
+    displayWeather: function (data) { 
         const { name } = data.city;
         const { country } = data.city;
         const { main, description } = data.list[0].weather[0];
