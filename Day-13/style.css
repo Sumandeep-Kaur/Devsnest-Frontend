@@ -16,7 +16,6 @@ body {
     background: #4c9ce2;  
     background: -webkit-linear-gradient(to right, #ade5f9, #4c9ce2);  
     background: linear-gradient(to right, #ade5f9, #4c9ce2); 
-
 }
 .main-container{ 
     background: rgba(255,255,255,0.3);

@@ -15,11 +15,11 @@ let weather = {
     displayWeather: function (data) { 
         const { name } = data.city;
         const { country } = data.city;
-        const { main, description } = data.list[0].weather[0];
+        const { icon, description } = data.list[0].weather[0];
         const { temp, humidity, temp_min, temp_max } = data.list[0].main;
         const { speed } = data.list[0].wind;
         document.querySelector(".city").innerText = name + ", " + country;
-        document.querySelector("#image").src = "./images/" + main + ".png";
+        document.querySelector("#image").src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
         document.querySelector(".description").innerText = description;
         document.querySelector(".curr-temp").innerText = Math.round(temp) + "°C";
         document.querySelector(".min-max").innerText = Math.round(temp_min) + "°C/" + Math.round(temp_max) + "°C";
@@ -27,7 +27,8 @@ let weather = {
         document.querySelector(".wind").innerText = speed + " km/h";
 
         let otherDayForcast = '';
-        var next_day = day + 1;
+        
+        var next_day = day === 6? 0 : day + 1;
         for(var i = 7; i <= 40; i+= 7){
             const { temp } = data.list[i].main;
             const { icon } = data.list[i].weather[0];
