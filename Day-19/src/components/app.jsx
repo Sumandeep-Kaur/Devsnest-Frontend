@@ -1,4 +1,5 @@
-import "./style.css";
+import "../style.css";
+import Count from "./count";
 
 const App = () => {
     return (
@@ -7,19 +8,19 @@ const App = () => {
             <div className="container">
                 <div className="card">
                     <h2 className="player">Player 1</h2>
-                    <h2 className="score">0</h2>
+                    <Count />
                 </div>
                 <div className="card">
                     <h2 className="player">Player 2</h2>
-                    <h1 className="score">0</h1>
+                    <Count />
                 </div>
                 <div className="card">
                     <h2 className="player">Player 3</h2>
-                    <h1 className="score">0</h1>
+                    <Count />
                 </div>
                 <div className="card">
                     <h2 className="player">Player 4</h2>
-                    <h1 className="score">0</h1>
+                    <Count />
                 </div>
             </div>
         </div>
